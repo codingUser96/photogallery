@@ -132,3 +132,10 @@ code {
     text-align: center;
     margin: .5rem .25rem .25rem 0;
 }
+
+.fx-btn-container {
+  width: 100%;
+  padding: .5rem 0;
+  text-align: center;
+  margin: .5rem 0;
+}
