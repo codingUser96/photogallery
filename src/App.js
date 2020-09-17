@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 
 const App = props => {
+  const url = 'https://api-eu-central-1.graphcms.com/v2/ckf3f6ity0p8d01yz4kkic7oi/master';
   const [photos, setPhotos] = useState([]);
   const [photosTotalCount, setPhotoTotalCount] = useState(0);
   useEffect(()=> {
@@ -10,7 +11,7 @@ const App = props => {
   },[])
 
   const getPhotos = () => {
-    fetch('https://api-eu-central-1.graphcms.com/v2/ckf3f6ity0p8d01yz4kkic7oi/master', {
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,7 +50,7 @@ const App = props => {
     if(photos[(photos.length)-1] !== undefined) {
       element = photos[(photos.length)-1].id
     }
-    fetch('https://api-eu-central-1.graphcms.com/v2/ckf3f6ity0p8d01yz4kkic7oi/master', {
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
