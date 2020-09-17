@@ -141,9 +141,13 @@ code {
 }
 
 .footer {
-  background: #212529;
+  background: #000000;
 }
 
 .footer-copyright {
   color: #fff;
+}
+
+.footerLink {
+  text-decoration: none !important;
 }
