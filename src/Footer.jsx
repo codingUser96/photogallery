@@ -18,20 +18,20 @@ const Footer = props => {
                             </li>
                         </ul> */}
                     </div>
-                    <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="footer-copyright text-uppercase">Instagram</h5>
+                    <div class="col-md-2 mb-md-0 mb-3">
+                        <h6 class="footer-copyright text-uppercase">Instagram</h6>
                         <ul class="list-unstyled">
                         <li>
                             <a href="https://www.instagram.com/abarajithanpm/?igshid=e193le1nhut8" className="fa fa-instagram">abarajithanpm</a>
                         </li>
                         </ul>
-                        <h5 class="footer-copyright text-uppercase">Mail</h5>
+                        <h6 class="footer-copyright text-uppercase">Mail</h6>
                         <ul class="list-unstyled">
                             <li>
                                 <a href="#!">abarajithanpm@gmail.com</a>
                             </li>
                         </ul>
-                        <h5 class="footer-copyright text-uppercase">Contact</h5>
+                        <h6 class="footer-copyright text-uppercase">Contact</h6>
                         <ul class="list-unstyled">
                             <li>
                                 <a href="#!">+91 74021 97433</a>
