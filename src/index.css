@@ -139,3 +139,11 @@ code {
   text-align: center;
   margin: .5rem 0;
 }
+
+.footer {
+  background: #212529;
+}
+
+.footer-copyright {
+  color: #fff;
+}
