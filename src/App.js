@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Urls } from './config';
 import Header from './Header';
-import Hearer from './Header';
 
 const App = props => {
   const [photos, setPhotos] = useState([]);
-  const [photosTotalCount, setPhotoTotalCount] = useState(0);
+  // const [photosTotalCount, setPhotoTotalCount] = useState(0);
   useEffect(()=> {
     getPhotos();
   },[])
 
   const getPhotos = () => {
-    fetch(Urls.apiUrl, {
+    fetch('https://api-eu-central-1.graphcms.com/v2/ckf3f6ity0p8d01yz4kkic7oi/master', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +33,7 @@ const App = props => {
       .then((res) => res.json())
       .then((data) => {
           if(data) {
-            setPhotoTotalCount(data.data.photosConnection.aggregate.count);
+            // setPhotoTotalCount(data.data.photosConnection.aggregate.count);
             setPhotos(data.data.photos);
         }
       }).catch((error)=>{
