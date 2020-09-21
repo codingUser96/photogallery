@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './Header';
+import Title from './Title';
 import Footer from './Footer';
 
 const App = props => {
@@ -93,19 +94,7 @@ const App = props => {
     <div>
       <Header />
       <div className="fx-l-main" id="pageTop">
-        <section className="fx-l-insights-intro">
-          <div className="fx-l-insights-intro-container">
-            <div className="fx-l-insights-heading">
-              <div className="fx-l-insights-heading-container">
-                <div className="fx-l-insights-heading-copy">
-                  <h1 className="fx-featured-heading fx-featured-heading-thin">ABARAJITHAN PHOTOGRAPHY</h1>
-                    <hr className="fx-divider fx-divider--centered"/>
-                      <h4 className="subTitle">நாம் கடந்துச் செல்லும் நிகழ்வுகளும், நம்மை கடந்துச் செல்லும் நிகழ்வுகளும் - புகைப்படம்</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Title />
         <div className="mb-2">
           <section className="fx-l-insights-tiles" id="articles" role="tabpanel" aria-labelledby="Articles" >
             <div className="fx-l-insights-tiles-container">
