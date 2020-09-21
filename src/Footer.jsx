@@ -11,12 +11,6 @@ const Footer = props => {
                     </div>
                     <hr className="clearfix w-100 d-md-none pb-3"/>
                     <div className="col-md-3 mb-md-0 mb-3">
-                        {/* <h5 className="footer-copyright text-uppercase">Mail</h5>
-                        <ul className="list-unstyled">
-                            <li>
-                                <a href="#!">abarajithanpm@gmail.com</a>
-                            </li>
-                        </ul> */}
                     </div>
                     <div className="col-md-2 mb-md-0 mb-3">
                         <h6 className="footer-copyright text-uppercase">Instagram</h6>
