@@ -95,49 +95,49 @@ const App = props => {
       <Header />
       <div className="fx-l-main" id="pageTop">
         <Title />
-        <div className="mb-2">
-          <section className="fx-l-insights-tiles" id="articles" role="tabpanel" aria-labelledby="Articles" >
-            <div className="fx-l-insights-tiles-container">
-              <div className="col-md-12">
-                <div className="row">   
-                  {photos.map((data, i) => {
-                    return (
-                      <div className="col-md-3 mb-2">
-                        <div key={i} className="card">
-                          {(data.images !== undefined)?(
-                            <img src={data.images.url} className="card-img-top w-100" alt="..."/>
-                          ):(
-                          <div></div>
-                          )}
-                          <div className="card-body">
-                            { data.tags.length > 0  ? data.tags.map((e, i) => {
-                              return <div className="tagSection">
-                                <span className="tags" key={i}>{e}</span>
-                              </div>
-                            }) : ''}
+          <div className="mb-2">
+            <section className="fx-l-insights-tiles" id="articles" role="tabpanel" aria-labelledby="Articles" >
+              <div className="fx-l-insights-tiles-container">
+                <div className="col-md-12">
+                  <div className="row">   
+                    {photos.map((data, i) => {
+                      return (
+                        <div className="col-md-3 mb-2">
+                          <div key={i} className="card">
+                            {(data.images !== undefined)?(
+                              <img src={data.images.url} className="card-img-top w-100" alt="..."/>
+                            ):(
+                            <div></div>
+                            )}
+                            <div className="card-body">
+                              { data.tags.length > 0  ? data.tags.map((e, i) => {
+                                return <div className="tagSection">
+                                  <span className="tags" key={i}>{e}</span>
+                                </div>
+                              }) : ''}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )
-                  })}
+                      )
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
-      </div>
-      {(photosTotalCount > 0) && (photosTotalCount != photos.length)? (
-        <div className="fx-btn-container">
-          <button className="btn btn-primary" onClick={loadMore.bind()} >Load More</button>
-        </div>
-      ):(
-        <span></span>
-      )}  
-      {(photosTotalCount > 0) ?  (
-        <Footer />
-      ):(
-        <span></span>
-      )}
+        {(photosTotalCount > 0) && (photosTotalCount != photos.length)? (
+          <div className="fx-btn-container">
+            <button className="btn btn-primary" onClick={loadMore.bind()} >Load More</button>
+          </div>
+        ):(
+          <span></span>
+        )}  
+        {(photosTotalCount > 0) ?  (
+          <Footer />
+        ):(
+          <span></span>
+        )}
     </div>
   )
 }
