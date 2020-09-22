@@ -150,3 +150,34 @@ code {
 .footerLink {
   text-decoration: none !important;
 }
+
+.form-input {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  width: 70%;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  box-shadow: none;
+  outline: none;
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+       -o-transition: all .5s ease;
+          transition: all .5s ease;
+}
+
+.form-input.smooth-corner {
+  border-radius: 5px;
+}
+
+.form-input.shutter {
+  border: 2px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 20px 0 0 #d5d5d5 inset, 0 -20px 0 0 #d5d5d5 inset;
+}
+
+.form-input.shutter:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, .3);
+}

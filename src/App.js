@@ -19,7 +19,7 @@ const App = props => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query: `{
-        photos (first: 8){
+        photos (first: 8, orderBy: updatedAt_DESC){
           id
           images {
             id
@@ -58,7 +58,7 @@ const App = props => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query: `{
-        photos (after: `+`\"`+element+`\"`+`, first: 4){
+        photos (after: `+`\"`+element+`\"`+`, first: 4, orderBy: updatedAt_DESC){
           id
           images {
             id
@@ -98,6 +98,13 @@ const App = props => {
           <div className="mb-2">
             <section className="fx-l-insights-tiles" id="articles" role="tabpanel" aria-labelledby="Articles" >
               <div className="fx-l-insights-tiles-container">
+                <br></br>
+                {/* <div className="searchDiv float-right">
+                  <input type="text" className="form-input shutter" />&nbsp;
+                  <button className="btn btn-primary">Search</button>
+                </div>
+                <br></br>
+                <br></br> */}
                 <div className="col-md-12">
                   <div className="row">   
                     {photos.map((data, i) => {
