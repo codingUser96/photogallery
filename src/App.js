@@ -3,12 +3,15 @@ import './App.css';
 import Header from './Header';
 import Title from './Title';
 import Footer from './Footer';
+import ReactGA from 'react-ga';
 
 const App = props => {
   const url = 'https://api-eu-central-1.graphcms.com/v2/ckf3f6ity0p8d01yz4kkic7oi/master';
   const [photos, setPhotos] = useState([]);
   const [photosTotalCount, setPhotoTotalCount] = useState(0);
   useEffect(()=> {
+    ReactGA.initialize('G-B2YEP6FVTH');
+ReactGA.pageview(window.location.pathname + window.location.search);
     getPhotos();
   },[])
 
