@@ -11,6 +11,7 @@ const App = props => {
   const [photosTotalCount, setPhotoTotalCount] = useState(0);
   useEffect(()=> {
     ReactGA.initialize('G-B2YEP6FVTH');
+    console.log(window.location.pathname)
 ReactGA.pageview(window.location.pathname + window.location.search);
     getPhotos();
   },[])
@@ -50,6 +51,11 @@ ReactGA.pageview(window.location.pathname + window.location.search);
   }
   
   const loadMore = () => {
+    ReactGA.event({
+      action: 'loadMore',
+      category: 'photography',
+      label: 'Load More'
+    })
     let element = '';
     console.log(photos)
     if(photos[(photos.length)-1] !== undefined) {
