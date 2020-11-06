@@ -5,13 +5,12 @@ import Title from './Title';
 import Footer from './Footer';
 import ReactGA from 'react-ga';
 
+ReactGA.initialize('G-B2YEP6FVTH');
 const App = props => {
   const url = 'https://api-eu-central-1.graphcms.com/v2/ckf3f6ity0p8d01yz4kkic7oi/master';
   const [photos, setPhotos] = useState([]);
   const [photosTotalCount, setPhotoTotalCount] = useState(0);
   useEffect(()=> {
-    ReactGA.initialize('G-B2YEP6FVTH');
-    console.log(window.location.pathname)
     ReactGA.pageview(window.location.pathname + window.location.search);
     getPhotos();
   },[])
@@ -52,12 +51,11 @@ const App = props => {
   
   const loadMore = () => {
     ReactGA.event({
+      category: 'Button',
       action: 'loadMore',
-      category: 'photography',
       label: 'Load More'
     })
     let element = '';
-    console.log(photos)
     if(photos[(photos.length)-1] !== undefined) {
       element = photos[(photos.length)-1].id
     }
