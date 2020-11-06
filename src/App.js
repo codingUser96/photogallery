@@ -52,8 +52,7 @@ const App = props => {
   const loadMore = () => {
     ReactGA.event({
       category: 'Button',
-      action: 'loadMore',
-      label: 'Load More'
+      action: 'loadMore'
     })
     let element = '';
     if(photos[(photos.length)-1] !== undefined) {
