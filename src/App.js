@@ -12,7 +12,7 @@ const App = props => {
   useEffect(()=> {
     ReactGA.initialize('G-B2YEP6FVTH');
     console.log(window.location.pathname)
-ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(window.location.pathname + window.location.search);
     getPhotos();
   },[])
 
